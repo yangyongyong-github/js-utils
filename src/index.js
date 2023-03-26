@@ -19,8 +19,12 @@
 
 // export default modules;
 
-import plugin from "./plugin/index.js"
+const plugin = require("./plugin")
 
-export default plugin
+// import plugin from 
+
+// export default plugin
+
+module.exports = plugin
 
 // export * from './plugin/index.js'

@@ -18,16 +18,7 @@ export function getToken(token) {
 
 
 
-/**
- * unique
- * @param {array} arr
- * @param {string} val
- * @returns
- */
-export function unique(arr, val) {
-	const res = new Map();
-	return arr.filter(item => !res.has(item[val]) && res.set(item[val], 1));
-}
+
 
 /**
  * 位数截取函数
@@ -55,29 +46,5 @@ export const slicefn = (origin, maxLen, digit = false) => {
 	}
 }
 
-// '23.1%' -> 23.1
-export const persent2Number = (numStr) => +numStr.split('%')[0];
 
-// 四舍五入，保留2位小数
-export function keepTwoDecimal(num) {
-	let result = parseFloat(num);
-	if (isNaN(result)) {
-		return console.log('keepTwoDecimal fn : Param is not number');
-	}
-	result = Math.round(num * 100) / 100;
-	return result;
-};
 
-export function deepClone(obj) {
-	return JSON.parse(JSON.stringify(obj));
-}
-
-// 获取对象的深层次值
-export function getDeepValue(obj, keyStr, fix = '') {
-	const keys = keyStr.split('.');
-	let val = obj;
-	keys.forEach((key, idx) => {
-		val = val[key] || (idx === keys.length - 1 ? undefined : {});
-	});
-	return fix + val;
-}
