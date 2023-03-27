@@ -52,3 +52,5 @@ console.log(package) // self not defined
 
 import 报错 module:""
 ```
+
+方法之间如何相互访问（避免写公共的utils方法）
