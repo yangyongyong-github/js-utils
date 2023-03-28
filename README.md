@@ -1,4 +1,4 @@
-# JSTool API
+# JSTools API
 
 ## Date relative API
 > dateFormat
